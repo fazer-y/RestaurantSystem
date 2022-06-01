@@ -1,84 +1,30 @@
 {
-    "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "type": "shell",
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "C:\\Users\\86135\\Desktop\\C\\RestaurantSystem\\src\\UI.c",
+                "-I","C:\\Users\\86135\\Desktop\\C\\RestaurantSystem\\include",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "windows": {
-                "command": "powershell",
-                "args": [
-                    "-c",
-                    "mingw32-make"
-                ]
-            },
-            "linux": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "make"
-                ]
-            },
-            "osx": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "make"
-                ]
-            }
-        },
-        {
-            "label": "build & run",
-            "type": "shell",
-            "windows": {
-                "command": "powershell",
-                "args": [
-                    "-c",
-                    "'mingw32-make run'"
-                ]
-            },
-            "linux": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "'make run'"
-                ]
-            },
-            "osx": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "'make run'"
-                ]
-            }
-        },
-        {
-            "label": "clean",
-            "type": "shell",
-            "windows": {
-                "command": "powershell",
-                "args": [
-                    "-c",
-                    "'mingw32-make clean'"
-                ]
-            },
-            "linux": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "'make clean'"
-                ]
-            },
-            "osx": {
-                "command": "bash",
-                "args": [
-                    "-c",
-                    "'make clean'"
-                ]
-            }
+            "detail": "调试器生成的任务。"
         }
-    ]
+    ],
+    "version": "2.0.0"
 }
