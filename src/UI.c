@@ -30,19 +30,33 @@ enum UserType ShowWelcomeUI()
         system("cls");
         if( typeInput==1 )
         {
-            userType = Waiter;
-            rsCurrentInfo.userType = userType;
-        }
-        else if( typeInput==2 )
-        {
             printf("########## 山东大学（威海） 泰园餐厅 ##########\n\n");
-            printf("\t请输入管理员密码以便验证你的身份\n\n");
+            printf("\t请输入服务员账号: \n\n");
             printf("\t> ___________________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
             char password_input[ADMINPAS_LENGTH_MAX+1];
             char adminID_input[ADMINID_LENGTH_MAX+1];
             //scanf("%s", password_input);
             fscanf(stdin, "%s", password_input);//更安全的输入函数！
             clearScreenBuffer();
+            printf("\t请输入服务员密码: \n\n");
+            printf("\t> ___________________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+            fscanf(stdin, "%s", adminID_input);
+            clearScreenBuffer();
+            userType = Waiter;
+            rsCurrentInfo.userType = userType;
+        }
+        else if( typeInput==2 )
+        {
+            printf("########## 山东大学（威海） 泰园餐厅 ##########\n\n");
+            printf("\t请输入管理员账号: \n\n");
+            printf("\t> ___________________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+            char password_input[ADMINPAS_LENGTH_MAX+1];
+            char adminID_input[ADMINID_LENGTH_MAX+1];
+            //scanf("%s", password_input);
+            fscanf(stdin, "%s", password_input);//更安全的输入函数！
+            clearScreenBuffer();
+            printf("\t请输入管理员密码: \n\n");
+            printf("\t> ___________________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
             fscanf(stdin, "%s", adminID_input);
             clearScreenBuffer();
 

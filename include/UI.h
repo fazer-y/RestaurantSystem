@@ -9,7 +9,7 @@
 # ifndef __UI_H_
 # define __UI_H_
 
-#include "Core_Administrater1.h"
+#include "Core_Administrater.h"
 
 
 // 显示主界面

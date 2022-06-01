@@ -10,7 +10,7 @@
 # define __CORE_SYSTEM_H_
 
 #include "UI.h"
-#include "CORE_Administrater1.h"
+#include "CORE_Administrater.h"
 
 
 enum UserType{undefine, Waiter, Admin};
